@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebCampBackendNew</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="tC/e9LIb6lBMDgb1Jq2LmQ1/h7N2JHTSDUCI+dh11/06au8PVPyFPzKqf1HEhbibYcprxST/GeoObJGbpFOK3w==" />
+
+    <link rel="stylesheet" media="all" href="/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" data-turbolinks-track="reload" />
+    <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    <p id="notice"></p>
+
+<h1>Books</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>リーダブルコード</td>
+        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+        <td><a class="show_124140" href="/books/124140">Show</a></td>
+        <td><a class="edit_124140" href="/books/124140/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124140" rel="nofollow" data-method="delete" href="/books/124140">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>トラブル知らずのシステム設計</td>
+        <td>システム設計の要点を図解で説明してくれます</td>
+        <td><a class="show_124141" href="/books/124141">Show</a></td>
+        <td><a class="edit_124141" href="/books/124141/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124141" rel="nofollow" data-method="delete" href="/books/124141">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>たのしいRuby</td>
+        <td>Rubyの入門におすすめです</td>
+        <td><a class="show_124142" href="/books/124142">Show</a></td>
+        <td><a class="edit_124142" href="/books/124142/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124142" rel="nofollow" data-method="delete" href="/books/124142">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>入門Git</td>
+        <td>gitについての基本操作から内部構造まで解説してくれます</td>
+        <td><a class="show_124143" href="/books/124143">Show</a></td>
+        <td><a class="edit_124143" href="/books/124143/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124143" rel="nofollow" data-method="delete" href="/books/124143">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>アルゴリズム図鑑</td>
+        <td>アルゴリズムについてカラーイラストでしっかり解説してくれます</td>
+        <td><a class="show_124144" href="/books/124144">Show</a></td>
+        <td><a class="edit_124144" href="/books/124144/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124144" rel="nofollow" data-method="delete" href="/books/124144">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>達人プログラマー</td>
+        <td>プログラマ入門者は必読！</td>
+        <td><a class="show_124145" href="/books/124145">Show</a></td>
+        <td><a class="edit_124145" href="/books/124145/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124145" rel="nofollow" data-method="delete" href="/books/124145">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>データベース実践入門</td>
+        <td>効率的なSQL文を教えてくれます</td>
+        <td><a class="show_124146" href="/books/124146">Show</a></td>
+        <td><a class="edit_124146" href="/books/124146/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" class="destroy_124146" rel="nofollow" data-method="delete" href="/books/124146">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+
+
+<h2>New book</h2>
+<%= form_with model: @book, class: "new_book", id: "new_book", action: "/books",  accept: {charset: "UTF-8"}, url: '/books', method: :post do |f| %>
+<input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ub23/1Nn+CIFdHenJGtZLwAoKn2EGQUZJIyCEeRo3tacEId+WCw3+1mJAQOBESXK7mCT8qZgrq2m8J7cs+CGlg==" />
+
+
+
+
+  <div class="field">
+  <%= f.label :Title %>
+   <%= f.text_field :title, type: "text", name: "book[title]", class: "book_title", id: "book_title" %>
+  </div>
+
+  <div class="field">
+  <%= f.label :Body%>
+  <%= f.text_area :body, class: "book_body", id: "book_body", name: "book[body]"  %>
+  </div>
+
+  <div class="actions">
+  <%= f.submit 'Create Book', name: "commit", value: "Create Book", data: { disable_with: "Create Book" } %>
+  </div>
+</form>
+	
+<% end %> 
+  </body>
+</html>
+
+
+
+
+<!-- <h1>新規投稿</h1>
+
+<form class="new_book"b id="new_book"b action="/books"b accept-charset="UTF-8"b method="post"b>
+<input name="utf8" type="hidden" value="&#x2713;" />p<input type="hidden" name="authenticity_token" value="ub23/1Nn+CIFdHenJGtZLwAoKn2EGQUZJIyCEeRo3tacEId+WCw3+1mJAQOBESXK7mCT8qZgrq2m8J7cs+CGlg==" />p
+
+  <div class="field">
+    <label for="book_title">Title</label>b
+    <input class="book_title"b type="text"b name="book[title]"b id="book_title"b />b
+  </div>
+
+  <div class="field">
+    <label for="book_body">Body</label>b
+    <textarea class="book_body"b name="book[body]"b id="book_body"b>b
+</textarea>
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book" />b
+  </div>
+</form>
+
+-->
